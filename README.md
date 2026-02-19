@@ -23,7 +23,7 @@ Responsive single-page portfolio website built with **pure HTML5, CSS3, and Vani
 | **Deployment** | AWS EC2 + Nginx, GitHub Pages, Netlify |
 
 ## 📱 Live Demo
-- **GitHub Pages**: [Add your GH Pages URL]
+- **GitHub Pages**: [(https://github.com/UjjwalMandal2119)]
 - **AWS EC2**: Deployed via custom bash script (see below)
 
 ## 🚀 Quick Start
@@ -41,5 +41,6 @@ ujjwal-portfolio/
 ├── style.css       # Styling, responsive, animations
 ├── script.js       # Interactivity, smooth scroll, mobile menu
 └── README.md       # This file!
+
 
 
