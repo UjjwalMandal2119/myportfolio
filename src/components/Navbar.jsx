@@ -2,6 +2,7 @@ import { profile } from '../data';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
+  { label: 'Why Me', href: '#why-me' },
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
