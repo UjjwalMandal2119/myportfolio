@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-space-950 text-slate-200 antialiased;
+  }
+  ::selection {
+    @apply bg-nebula-violet text-white;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-xl;
+  }
+  .section-badge {
+    @apply mb-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold tracking-widest text-cyan-300 uppercase;
+  }
+  .heading {
+    @apply text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-nebula-violet to-nebula-indigo px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-nebula-violet/30 transition hover:-translate-y-0.5 hover:shadow-xl hover:shadow-nebula-indigo/40;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:border-cyan-300/60 hover:bg-white/10;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      90deg,
+      #a78bfa,
+      #818cf8,
+      #22d3ee,
+      #ec4899
+    );
+  }
+}
+
+/* ---- Deep space background with animated stars & nebula ---- */
+.stars {
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #ffffff, transparent),
+    radial-gradient(2px 2px at 40px 70px, #cbd5e1, transparent),
+    radial-gradient(1px 1px at 90px 40px, #ffffff, transparent),
+    radial-gradient(2px 2px at 130px 80px, #f8fafc, transparent),
+    radial-gradient(1px 1px at 160px 20px, #e2e8f0, transparent),
+    radial-gradient(2px 2px at 210px 60px, #ffffff, transparent),
+    radial-gradient(1px 1px at 250px 120px, #cbd5e1, transparent),
+    radial-gradient(2px 2px at 300px 30px, #ffffff, transparent);
+  background-size: 350px 350px;
+  animation: drift 120s linear infinite;
+}
+
+@keyframes drift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 1000px 500px;
+  }
+}
+
+.orbiting-planet {
+  position: absolute;
+  border-radius: 9999px;
+}
+
+.orbit-ring {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+}

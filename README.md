@@ -1,46 +1,78 @@
-﻿# myportfolio
- # 🚀 Ujjwal Mandal - Personal Portfolio
+# 🚀 Ujjwal Mandal — Personal Portfolio
 
-Responsive single-page portfolio website built with **pure HTML5, CSS3, and Vanilla JavaScript**. Showcases my skills as a Computer Science student from Patna, Bihar, specializing in full-stack web development (MERN), DSA, AWS, and DevOps.
-
-[![Portfolio Preview](https://via.placeholder.com/1200x600/667eea/ffffff?text=Ujjwal+Mandal+Portfolio)](https://github.com/UjjwalMandal2119/Ujjwal-Portfolio)
+A modern, **galaxy / solar-system** themed personal portfolio rebuilt with **React + Vite + Tailwind CSS**.
+Clean, enterprise-grade UI with a subtle space aesthetic — animated starfield, orbiting planets and
+nebula glows — all while staying fast, responsive and simple to maintain.
 
 ## ✨ Features
-- **Fully Responsive** - Mobile-first design (works on all devices)
-- **Smooth Animations** - Scroll-triggered effects, hover transforms
-- **Interactive Elements** - Mobile hamburger menu, smooth scrolling
-- **Modern Glassmorphism UI** - Backdrop blur, gradients, shadows
-- **Performance Optimized** - <100KB total size, no frameworks
-- **SEO-Friendly** - Semantic HTML, meta tags, fast load
-- **EC2-Ready** - Static hosting with Nginx (production-tested)
+
+- **React 18 + Vite** — instant dev server, optimized production build
+- **Tailwind CSS** — utility-first styling with a custom "space" theme
+- **Galaxy / solar-system vibe** — animated starfield, orbiting planets, nebula glows, glassmorphism cards
+- **Photo showcase** — your photo sits at the center of a mini solar system in the hero
+- **Live GitHub Projects** — projects are fetched from the GitHub API (`UjjwalMandal2119`), always up to date
+- **Mailto contact** — one-click email button plus a form that opens the visitor's mail client pre-filled
+- **Fully responsive** — mobile-first, works on all devices
+- **SEO-friendly** — semantic markup, meta description, theme color
 
 ## 🛠 Tech Stack
+
 | Category | Technologies |
 |----------|--------------|
-| **Frontend** | HTML5, CSS3 (Grid/Flexbox), Vanilla JS (ES6+) |
-| **UI/UX** | Glassmorphism, Animations (Intersection Observer), Font Awesome |
-| **Tools** | Google Fonts (Inter), Responsive Design |
-| **Deployment** | AWS EC2 + Nginx, GitHub Pages, Netlify |
-
-## 📱 Live Demo
-- **GitHub Pages**: [(https://github.com/UjjwalMandal2119)]
-- **AWS EC2**: Deployed via custom bash script (see below)
+| **Framework** | React 18, Vite 5 |
+| **Styling** | Tailwind CSS 3, custom CSS animations |
+| **Data** | GitHub REST API (live project sync) |
+| **Icons** | Font Awesome 6 |
+| **Fonts** | Inter |
 
 ## 🚀 Quick Start
-1. **Clone/Download** files: `index.html`, `style.css`, `script.js`
-2. **Open** `index.html` in any browser
-3. **Customize**:
-   - Update LinkedIn/LeetCode links in `#contact`
-   - Add project screenshots/links
-   - Replace hero background gradient/image
 
 ```bash
-# Folder structure
-ujjwal-portfolio/
-├── index.html      # Main structure & content
-├── style.css       # Styling, responsive, animations
-├── script.js       # Interactivity, smooth scroll, mobile menu
-└── README.md       # This file!
+npm install     # install dependencies
+npm run dev     # start dev server (http://localhost:5173)
+npm run build   # production build → dist/
+npm run preview # preview the production build
+```
 
+## 📁 Project Structure
 
+```
+myportfolio/
+├── index.html              # Vite entry (loads /src/main.jsx)
+├── package.json
+├── vite.config.js
+├── tailwind.config.js      # space theme, orbit/twinkle animations
+├── postcss.config.js
+└── src/
+    ├── main.jsx            # React root
+    ├── App.jsx             # assembles all sections
+    ├── index.css           # Tailwind + galaxy background styles
+    ├── data.js             # ✏️ EDIT: profile, skills, links
+    ├── assets/ujjwal.jpg   # your photo
+    └── components/
+        ├── Starfield.jsx   # animated star + nebula background
+        ├── Navbar.jsx
+        ├── Hero.jsx        # photo inside solar system
+        ├── About.jsx
+        ├── Skills.jsx
+        ├── Projects.jsx    # live GitHub repos
+        ├── Contact.jsx     # mailto form + direct email
+        └── Footer.jsx
+```
 
+## ✏️ Customize
+
+- **Personal info / links** → edit `src/data.js` (email, phone, GitHub, LinkedIn, LeetCode, tagline)
+- **Skills** → edit the `skills` array in `src/data.js`
+- **Projects** → auto-synced from GitHub; the username comes from `profile.githubUser` in `src/data.js`
+- **Photo** → replace `src/assets/ujjwal.jpg` (keep the same filename) or update the import in `Hero.jsx`
+- **Colors / animations** → adjust the `space` / `nebula` palette and keyframes in `tailwind.config.js`
+
+## 🚀 Deploy
+
+The production build lives in `dist/` and is fully static — ready for **Vercel**, **Netlify**,
+**GitHub Pages**, or your existing **AWS EC2 + Nginx** setup.
+
+```bash
+npm run build
+```
